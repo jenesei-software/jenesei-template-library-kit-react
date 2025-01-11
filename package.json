@@ -1,0 +1,80 @@
+{
+  "author": "Cyril Strone",
+  "name": "@jenesei-software/library-name",
+  "version": "0.4.95",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenesei-software/library-name.git"
+  },
+  "main": "./dist/library-name.umd.js",
+  "module": "./dist/library-name.es.js",
+  "types": "./dist/main.d.ts",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "ui",
+    "styled-components"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/library-name.es.js",
+      "require": "./dist/library-name.umd.js",
+      "types": "./dist/main.d.ts"
+    }
+  },
+  "scripts": {
+    "generate-icons": "node generate-icons.mjs",
+    "build": "tsc && vite build",
+    "storybook": "npm run generate-icons && storybook dev -p 3030",
+    "build-storybook": "npm run generate-icons && cross-env BUILD_STORYBOOK=true storybook build --quiet --disable-telemetry",
+    "lint": "eslint \"src/**/*.{ts,tsx,js,jsx}\"",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\""
+  },
+  "peerDependencies": {
+    "@jenesei-software/jenesei-ui-react": "^0.4.107",
+    "react": "^17.0 || ^18.0",
+    "react-dom": "^17.0 || ^18.0",
+    "styled-components": "^6.0"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@eslint/js": "^9.13.0",
+    "@fontsource/inter": "^5.1.0",
+    "@fontsource/roboto": "^5.1.0",
+    "@storybook/addon-essentials": "^8.3.6",
+    "@storybook/addon-links": "^8.3.6",
+    "@storybook/addon-onboarding": "^8.3.6",
+    "@storybook/blocks": "^8.3.6",
+    "@storybook/react": "^8.3.6",
+    "@storybook/react-vite": "^8.3.6",
+    "@storybook/test": "^8.3.6",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "^22.8.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/styled-components": "^5.1.34",
+    "@vitejs/plugin-react": "^4.3.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-storybook": "^0.10.1",
+    "globals": "^15.11.0",
+    "prettier": "^3.3.3",
+    "react-docgen-typescript": "^2.2.2",
+    "sharp": "^0.33.5",
+    "storybook": "^8.3.6",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.12.0",
+    "vite": "^5.4.10",
+    "vite-plugin-bundle-analyzer": "^0.0.1",
+    "vite-plugin-dts": "^4.3.0",
+    "vite-tsconfig-paths": "^5.0.1"
+  }
+}
