@@ -55,7 +55,8 @@ export default defineConfig(() => {
             'styled-components': 'styled',
             'styled-reset': 'reset',
             react: 'React',
-            'react-dom': 'ReactDOM'
+            'react-dom': 'ReactDOM',
+            '@jenesei-software/jenesei-ui-react': 'jeneseiUiReact'
           }
         }
       }
