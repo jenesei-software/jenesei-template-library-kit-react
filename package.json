@@ -6,13 +6,13 @@
     "type": "git",
     "url": "git+https://github.com/jenesei-software/library-name.git"
   },
-  "main": "./dist/library-name.umd.js",
-  "module": "./dist/library-name.es.js",
-  "types": "./dist/main.d.ts",
+  "main": "./build/library-name.umd.js",
+  "module": "./build/library-name.es.js",
+  "types": "./build/main.d.ts",
   "license": "MIT",
   "type": "module",
   "files": [
-    "dist"
+    "build"
   ],
   "keywords": [
     "react",
@@ -21,9 +21,9 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/library-name.es.js",
-      "require": "./dist/library-name.umd.js",
-      "types": "./dist/main.d.ts"
+      "import": "./build/library-name.es.js",
+      "require": "./build/library-name.umd.js",
+      "types": "./build/main.d.ts"
     }
   },
   "scripts": {
