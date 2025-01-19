@@ -34,7 +34,7 @@ export default defineConfig(() => {
       !isStorybook &&
         dts({
           include: ['src/'],
-          exclude: ['src/declaration/jenesei-ui-react.d.ts', 'src/declaration/styled-components.d.ts'],
+          exclude: ['src/declaration/styled-components.d.ts'],
           rollupTypes: true,
           insertTypesEntry: true,
           tsconfigPath: './tsconfig.json'
