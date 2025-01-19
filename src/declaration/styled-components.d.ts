@@ -1,4 +1,4 @@
-import { IJeneseiTheme } from '@jenesei-software/jenesei-ui-react'
+import { IJeneseiTheme } from '@jenesei-software/jenesei-ui-react/style-theme'
 import 'styled-components'
 
 declare module 'styled-components' {

@@ -1,4 +1,4 @@
-import { Stack } from '@jenesei-software/jenesei-ui-react'
+import { Stack } from '@jenesei-software/jenesei-ui-react/component-stack'
 import { FC } from 'react'
 
 import { TestProps } from '.'

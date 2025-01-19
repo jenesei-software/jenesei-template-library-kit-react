@@ -1,5 +1,6 @@
 import { useGSAP } from '@gsap/react'
-import { JeneseiGlobalStyles, JeneseiTheme, ProviderPermission } from '@jenesei-software/jenesei-ui-react'
+import { ProviderPermission } from '@jenesei-software/jenesei-ui-react/context-permission'
+import { JeneseiGlobalStyles, JeneseiTheme } from '@jenesei-software/jenesei-ui-react/style-theme'
 import type { Preview } from '@storybook/react'
 import gsap from 'gsap'
 import React from 'react'
