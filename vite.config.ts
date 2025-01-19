@@ -34,7 +34,7 @@ export default defineConfig(() => {
       !isStorybook &&
         dts({
           include: ['src/'],
-          exclude: ['src/declaration/jenesei-ui-react.d.ts'],
+          exclude: ['src/declaration/jenesei-ui-react.d.ts', 'src/declaration/styled-components.d.ts'],
           rollupTypes: true,
           insertTypesEntry: true,
           tsconfigPath: './tsconfig.json'
@@ -69,7 +69,8 @@ export default defineConfig(() => {
             'styled-reset': 'reset',
             react: 'React',
             'react-dom': 'ReactDOM',
-            '@jenesei-software/jenesei-ui-react': 'jeneseiUiReact'
+            '@jenesei-software/jenesei-ui-react': 'jeneseiUiReact',
+            'react-helmet-async': 'reactHelmetAsync'
           }
         }
       }
