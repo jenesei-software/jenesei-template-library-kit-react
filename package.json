@@ -6,9 +6,9 @@
     "type": "git",
     "url": "git+https://github.com/jenesei-software/library-name.git"
   },
+  "types": "./build/main.d.ts",
   "module": "./build/main.es.js",
   "main": "./build/main.cjs.js",
-  "types": "./build/main.d.ts",
   "license": "MIT",
   "type": "module",
   "files": [
@@ -21,14 +21,14 @@
   ],
   "exports": {
     "./component-test": {
+      "types": "./build/component-test.d.ts",
       "import": "./build/component-test.es.js",
-      "require": "./build/component-test.cjs.js",
-      "types": "./build/component-test.d.ts"
+      "require": "./build/component-test.cjs.js"
     },
     ".": {
+      "types": "./build/main.d.ts",
       "import": "./build/main.es.js",
-      "require": "./build/main.cjs.js",
-      "types": "./build/main.d.ts"
+      "require": "./build/main.cjs.js"
     }
   },
   "scripts": {
@@ -37,12 +37,12 @@
     "build:prod": "tsc && cross-env NODE_ENV=prod vite build",
     "build:dev": "tsc && cross-env NODE_ENV=dev vite build",
     "build": "tsc && cross-env NODE_ENV=dev vite build",
-    "storybook": "npm run generate-icons && storybook dev -p 3030",
+    "storybook": "storybook dev -p 3030",
     "lint": "eslint \"src/**/*.{ts,tsx,js,jsx}\"",
     "format": "prettier --write \"src/**/*.{ts,tsx}\""
   },
   "peerDependencies": {
-    "@jenesei-software/jenesei-ui-react": "^0.5.14",
+    "@jenesei-software/jenesei-ui-react": "^0.5.17",
     "@tanstack/react-router": "^1.97.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
