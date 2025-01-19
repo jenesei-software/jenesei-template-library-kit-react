@@ -1,5 +1,7 @@
+/* eslint-disable no-undef */
 import react from '@vitejs/plugin-react'
 import path, { resolve } from 'path'
+import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import tsconfigPaths from 'vite-tsconfig-paths'
@@ -7,20 +9,29 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 import { peerDependencies } from './package.json'
 
 export default defineConfig(() => {
-  // eslint-disable-next-line no-undef
-  const isStorybookBuild = process.env.BUILD_STORYBOOK === 'true'
+  const isStorybook = process.env.NODE_ENV === 'storybook'
+  const isDev = process.env.NODE_ENV === 'dev'
+
+  console.log('isStorybookBuild: ', String(isStorybook))
+  console.log('isDev: ', String(isDev))
 
   return {
     resolve: {
       alias: {
-        // eslint-disable-next-line no-undef
         '@local': path.resolve(__dirname, './src')
       }
     },
     plugins: [
       react(),
       tsconfigPaths(),
-      !isStorybookBuild &&
+      isDev &&
+        visualizer({
+          open: true,
+          filename: 'stats.html',
+          gzipSize: true,
+          brotliSize: true
+        }),
+      !isStorybook &&
         dts({
           include: ['src/'],
           exclude: ['src/declaration/jenesei-ui-react.d.ts'],
@@ -42,11 +53,13 @@ export default defineConfig(() => {
         }
       },
       lib: {
-        // eslint-disable-next-line no-undef
-        entry: resolve(__dirname, 'src/main.ts'),
-        name: 'library-name',
-        formats: ['es', 'umd'],
-        fileName: format => `library-name.${format}.js`
+        entry: {
+          main: resolve(__dirname, 'src/main.ts'),
+
+          ['component-test']: resolve(__dirname, 'src/components/test/index.ts')
+        },
+        formats: ['es', 'cjs'],
+        fileName: (format, name) => `${name}.${format}.js`
       },
       rollupOptions: {
         external: Object.keys(peerDependencies),
