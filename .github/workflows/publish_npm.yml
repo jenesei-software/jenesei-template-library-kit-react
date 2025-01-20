@@ -82,7 +82,7 @@ jobs:
       - name: Check if version exists in NPM
         id: check_version_npm
         run: |
-          EXISTING_VERSION=$(npm view @jenesei-software/jenesei-ui-react versions --json | grep ${NEW_VERSION} || true)
+          EXISTING_VERSION=$(npm view @jenesei-software/library-name versions --json | grep ${NEW_VERSION} || true)
           if [ -n "$EXISTING_VERSION" ]; then
             echo "Version ${NEW_VERSION} already exists. Skipping publish."
             echo "publishNPM=false" >> $GITHUB_ENV
