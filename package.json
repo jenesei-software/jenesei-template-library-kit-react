@@ -39,7 +39,7 @@
     "format": "prettier --write \"src/**/*.{ts,tsx}\""
   },
   "peerDependencies": {
-    "@jenesei-software/jenesei-ui-react": ">=0.5.22",
+    "@jenesei-software/jenesei-ui-react": "^0.6.1",
     "react": ">=19.0.0",
     "react-dom": ">=19.0.0",
     "styled-components": ">=6.0"
