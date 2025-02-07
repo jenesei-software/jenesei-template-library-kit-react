@@ -56,7 +56,6 @@ export default defineConfig(() => {
         output: {
           globals: {
             'styled-components': 'styled',
-            'styled-reset': 'reset',
             react: 'React',
             'react-dom': 'ReactDOM',
             '@jenesei-software/jenesei-ui-react': 'jeneseiUiReact',
