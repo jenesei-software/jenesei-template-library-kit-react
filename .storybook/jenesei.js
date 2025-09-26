@@ -1,13 +1,13 @@
-import { create } from '@storybook/theming/create'
+import { create } from 'storybook/theming';
 
 export default create({
   base: 'light',
   brandTitle: 'Jenesei',
   brandUrl: 'https://jenesei.ru/',
-  brandImage: 'https://id.jenesei.ru/icons/icon-512x512.png',
+  brandImage: '/icons/icon-180x180.png',
   brandTarget: '_blank',
 
-  colorPrimary: '#395295',
+  color: '#395295',
   colorSecondary: '#4195D2',
 
   appBg: '#ffffff',
@@ -27,5 +27,5 @@ export default create({
   inputBg: '#ffffff',
   inputBorder: '#10162F',
   inputTextColor: '#10162F',
-  inputBorderRadius: 2
-})
+  inputBorderRadius: 2,
+});

@@ -27,9 +27,14 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "paths": {
-      "@local/*": ["src/*"],
+      "@local/*": ["src/*"]
     }
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    ".storybook-stories",
+    ".storybook-stories/default",
+    ".storybook"
+  ],
   "exclude": ["node_modules"]
 }
