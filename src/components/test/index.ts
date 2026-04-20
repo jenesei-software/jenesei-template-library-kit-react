@@ -1,2 +1,2 @@
-export * from './test'
-export * from './test.types'
+export { Test } from './test';
+export type { TestProps } from './test.types';

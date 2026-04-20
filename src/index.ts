@@ -1,1 +1,3 @@
-export * from '@local/example';
+// import './styles/css/index.css';
+
+export * from '@local/components/test';

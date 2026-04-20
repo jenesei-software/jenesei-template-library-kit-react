@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import 'styled-components'
 
-import { Test } from '.'
+import { Test } from '../../src/components/test'
 
 const meta: Meta<typeof Test> = {
   component: Test,
