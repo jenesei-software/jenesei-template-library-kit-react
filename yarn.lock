@@ -542,10 +542,10 @@
   resolved "https://registry.yarnpkg.com/@img/sharp-win32-x64/-/sharp-win32-x64-0.34.5.tgz#a81ffb00e69267cd0a1d626eaedb8a8430b2b2f8"
   integrity sha512-+29YMsqY2/9eFEiW93eqWnuLcWcufowXewwSNIT6UwZdUUCrM3oFjMWH/Z6/TMmb4hlFenmfAVbpWeup2jryCw==
 
-"@jenesei-software/jenesei-kit-react@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@jenesei-software/jenesei-kit-react/-/jenesei-kit-react-2.0.2.tgz#b591f719476b324fba87f0776dab605a44c63c0a"
-  integrity sha512-5Wzd9GQOk/+zDmPYiq+PARFbqWghZEDY7ihlEGfaWkW3dLt66hsz3G80IdBZPka2AJsQ6JeTaWBtsb4HGarWoA==
+"@jenesei-software/jenesei-kit-react@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@jenesei-software/jenesei-kit-react/-/jenesei-kit-react-2.2.0.tgz#a95469e5747c3fb532fed53df088eb83ba8bf2f9"
+  integrity sha512-EEWG/DsuoVJQkNG9FKelJzKB/5dIdvR5FXAAUv5PHfi9hQC5XoK3pKlStxsQ8OI+G1BqGSs9+NX27FsFxdFhXw==
   dependencies:
     "@floating-ui/react" "^0.27.12"
     "@jenesei-software/jenesei-library-log" "^2.0.0"
@@ -564,12 +564,11 @@
   resolved "https://registry.yarnpkg.com/@jenesei-software/jenesei-library-log/-/jenesei-library-log-2.0.0.tgz#6179e9f1b394bfc10a6818f95df844ab240bbc31"
   integrity sha512-IPVeF5NXxVeuOPmKdjf/M5eAj+ru/gU6MQNBMoTJlFJqm/bOFjl9JabnDEVNNa4BzZspmC68zvY2QUnRlc3Olw==
 
-"@jenesei-software/jenesei-plugin-vite@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@jenesei-software/jenesei-plugin-vite/-/jenesei-plugin-vite-2.4.0.tgz#7ee334dc78b7602dc81a1b42464dadd94e548579"
-  integrity sha512-GzR06HGvgmhPYVmT0sCM0gekEA+4484CcvImBmjGX7774TzQhltHBNVzQcsRiTrM/FJ8e7jUW3sYtxUPO28WrQ==
+"@jenesei-software/jenesei-plugin-vite@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@jenesei-software/jenesei-plugin-vite/-/jenesei-plugin-vite-2.5.0.tgz#2fe4fff324eac70c54686bae1e0ffaa6846c5d05"
+  integrity sha512-as2Z4Bui4h3T/0G3vPHBzp0Mz0NBBvrzHt+TRXfhL5QFZycSdTR6n3SFUmWQx4uC0RNplQLnST/R0gFsD2clqg==
   dependencies:
-    "@jenesei-software/jenesei-library-log" "^2.0.0"
     sharp "^0.34.5"
 
 "@joshwooding/vite-plugin-react-docgen-typescript@^0.7.0":

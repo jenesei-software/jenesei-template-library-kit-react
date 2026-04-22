@@ -10,14 +10,7 @@ import process from 'node:process';
 
 export default defineConfig(() => {
   const isStorybook = process.env.NODE_ENV === 'storybook';
-  const rollupExternal = [
-    'react',
-    'react-dom',
-    'react/jsx-runtime',
-    'react/jsx-dev-runtime',
-    '@jenesei-software/jenesei-kit-react',
-  ];
-
+  
   logger.info('isStorybookBuild: ', String(isStorybook));
 
   const sizesBackgroundTransparent = [57, 64, 72, 76, 114, 120, 144, 152, 180, 192, 256, 384, 512];
