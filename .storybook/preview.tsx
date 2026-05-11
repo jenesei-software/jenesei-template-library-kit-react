@@ -1,6 +1,6 @@
-import { ProviderBrowserTheme, ProviderScreenWidth } from '@jenesei-software/jenesei-kit-react';
+import { ProviderBrowserTheme, ProviderDialog, ProviderGeolocation, ProviderPermission, ProviderScreenWidth } from '@jenesei-software/jenesei-kit-react';
 import type { Preview } from '@storybook/react-vite';
-import { StrictMode } from 'react';
+import { PropsWithChildren, StrictMode } from 'react';
 import '@jenesei-software/jenesei-kit-react/styles.css'
 import './preview.css';
 
@@ -12,11 +12,17 @@ const preview: Preview = {
 
       return (
         <StrictMode>
-          <ProviderBrowserTheme defaultMode={sbMode}>
-            <ProviderScreenWidth>
-              <Story />
-            </ProviderScreenWidth>
-          </ProviderBrowserTheme>
+          <ProviderPermission>
+            <ProviderGeolocation>
+              <ProviderBrowserTheme defaultMode={sbMode}>
+                <ProviderDialog zIndex={999}>
+                  <Layout>
+                    <Story />
+                  </Layout>
+                </ProviderDialog>
+              </ProviderBrowserTheme>
+            </ProviderGeolocation>
+          </ProviderPermission>
         </StrictMode>
       );
     },
@@ -36,4 +42,8 @@ const preview: Preview = {
   },
 };
 
+const Layout = (props: PropsWithChildren) => {
+  // const { theme } = useBrowserTheme();
+  return <ProviderScreenWidth>{props.children}</ProviderScreenWidth>;
+};
 export default preview;
