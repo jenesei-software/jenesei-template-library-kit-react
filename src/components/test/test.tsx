@@ -2,7 +2,8 @@ import { Typography } from '@jenesei-software/jenesei-kit-react';
 import { Stack } from '@jenesei-software/jenesei-kit-react/component-stack';
 import { FC } from 'react';
 
-import { TestProps } from '.';
+import { TestProps } from './test.types';
+
 
 export const Test: FC<TestProps> = () => {
   return (
