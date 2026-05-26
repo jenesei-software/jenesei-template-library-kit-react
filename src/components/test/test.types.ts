@@ -1,1 +1,1 @@
-export type TestProps = object
+export type TestProps = object;

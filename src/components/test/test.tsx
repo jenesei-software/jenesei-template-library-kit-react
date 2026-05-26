@@ -4,7 +4,6 @@ import { FC } from 'react';
 
 import { TestProps } from './test.types';
 
-
 export const Test: FC<TestProps> = () => {
   return (
     <Stack>
