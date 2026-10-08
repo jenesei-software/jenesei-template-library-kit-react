@@ -8,6 +8,11 @@ const config: StorybookConfig = {
     options: {},
   },
   typescript: {
+    // Works because this template is on TypeScript 6.
+    // If you bump the project to TypeScript 7, Storybook 10 cannot resolve the
+    // tsconfig (no ts.sys) and the build fails with
+    // "Cannot read properties of undefined (reading 'fileExists')".
+    // In that case fall back to 'react-docgen'.
     reactDocgen: 'react-docgen-typescript',
   },
   staticDirs: ['../.storybook-public'],

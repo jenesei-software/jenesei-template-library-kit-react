@@ -1,7 +1,7 @@
 import { addons } from 'storybook/manager-api';
 
-import nan from './nan';
+import jenesei from './jenesei';
 
 addons.setConfig({
-  theme: nan,
+  theme: jenesei,
 });
