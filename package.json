@@ -15,21 +15,19 @@
     "react"
   ],
   "scripts": {
+    "check": "biome check src .storybook-stories && tsc -p tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.build.json",
     "typecheck:storybook": "tsc -p tsconfig.storybook.json",
-    "bundle-visualizer": "npx vite-bundle-visualizer",
-    "changelog": "conventional-changelog -p eslint -i CHANGELOG.md -s -r 0",
-    "gen:exports": "node scripts/generate-exports.mjs",
-    "biome:lint": "biome lint src",
-    "biome:lint:check": "biome lint src --no-fix",
-    "biome:format": "biome format --write src .storybook-stories",
-    "biome:format:check": "biome format src",
-    "biome:migrate": "biome migrate --write",
-    "biome:update": "biome update --write",
     "build:library": "npm run gen:exports && vite build",
     "build:main": "npm run gen:exports && vite build",
     "build:storybook": "npm run gen:exports && cross-env NODE_ENV=storybook storybook build --quiet --disable-telemetry -o build-storybook",
-    "storybook": "npm run gen:exports && storybook dev -p 3030"
+    "storybook": "npm run gen:exports && storybook dev -p 3030",
+    "gen:exports": "node scripts/generate-exports.mjs",
+    "bundle-visualizer": "npx vite-bundle-visualizer",
+    "biome:lint": "biome lint src",
+    "biome:format": "biome format --write src .storybook-stories",
+    "biome:migrate": "biome migrate --write",
+    "biome:update": "biome update --write"
   },
   "dependencies": {
     "@jenesei-software/jenesei-library-log": "^2.0.0"
@@ -67,6 +65,12 @@
       "import": "./build/index.es.js",
       "require": "./build/index.cjs.js",
       "default": "./build/index.es.js"
+    },
+    "./component-test": {
+      "types": "./build/component-test.d.ts",
+      "import": "./build/component-test.es.js",
+      "require": "./build/component-test.cjs.js",
+      "default": "./build/component-test.es.js"
     },
     "./styles.css": "./build/styles.css"
   }
