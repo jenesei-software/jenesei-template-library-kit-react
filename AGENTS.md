@@ -41,8 +41,8 @@ Run these from the repository root:
 npm run gen:exports
 npm run typecheck
 npm run typecheck:storybook
-npm run biome:lint:check
-npm run biome:format:check
+npm run biome:lint
+npm run biome:format
 npm run build:library
 npm run build:storybook
 npm run storybook
@@ -53,7 +53,7 @@ Before finishing a code change, run the smallest relevant validation set. For li
 ```bash
 npm run gen:exports
 npm run typecheck
-npm run biome:lint:check
+npm run biome:lint
 npm run build:library
 ```
 

@@ -6,6 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/jenesei-software/library-name.git"
   },
+  "packageManager": "yarn@1.22.22",
   "license": "MIT",
   "type": "module",
   "files": [
@@ -18,6 +19,7 @@
     "check": "biome check src .storybook-stories && tsc -p tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.build.json",
     "typecheck:storybook": "tsc -p tsconfig.storybook.json",
+    "build": "npm run build:library",
     "build:library": "npm run gen:exports && vite build",
     "build:main": "npm run gen:exports && vite build",
     "build:storybook": "npm run gen:exports && cross-env NODE_ENV=storybook storybook build --quiet --disable-telemetry -o build-storybook",
